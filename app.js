@@ -20,11 +20,22 @@ app.get('/' , (req, res) => {
     res.send("hola")
 })
 
-app.get('/productos', (req, res) => {
+app.get('/api/productos', (req, res) => {
     res.send(Archivo.getAll())
 })
 
+app.get('/api/productos/:id', (req, res) => {
+    let id = req.params.id;
+})
 
-app.get('/productoRandom', (req, res) => {
-    res.send(Archivo.productoRandom())
+app.post('/api/productos', (req, res) => {
+
+})
+
+app.put('/api/productos/:id', (req, res) => {
+
+})
+
+app.delete('/api/productos/:id', (req, res)=> {
+
 })
